@@ -1,20 +1,20 @@
  * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
  }
  
 
 .container {
-    width: vw;
+    width: 1395px;
     height: 100vh;
     font-family: "Raleway", sans-serif;
     display: grid;
-    grid-template-columns: 2.8fr 1.2fr;
+    grid-template-columns: 2.78fr 1.22fr;
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
       "nav nav"
       "header header"
+      /*"accom-most accom-most"*/
       "accommodations aside"
       "activities activities"
       "footer footer";
@@ -25,10 +25,12 @@ nav {
   grid-area: nav;
   margin: 15px;
   display: inline-block;
+  width: 1395px;
 }
 nav img {
   float: left;
   margin-top: 20px;
+  size: 23px;
 }
 nav ul {
   float: right;
@@ -71,16 +73,17 @@ a {
 header {
   grid-area: header;
   margin-left: 25px;
+  width: 1395px;
 }
 
 h2 {
 color: #000;
-font-size: 17px;
+font-size: 20px;
 margin-top: 2;
 }
 
 h6 {
-  font-size: 11px;
+  font-size: 15px;
   margin-top: 10px;
   margin-bottom: 15px;
   color: rgb(99, 97, 97);
@@ -91,7 +94,7 @@ h6 {
 .wrapper {
   position: relative;
   display: flex;
-  max-width: 100px;
+  width: 230px;
   height: 40px;
   border: 1px solid rgb(224, 222, 222);
 
@@ -152,23 +155,25 @@ h6 {
   outline: none;
 }
 
-/*span {
+span {
   padding-right: 7px;
-}*/
+}
 
 .fa-money-bill-wave {
   padding: 11px;
   background-color: lightblue;
   position: relative;
-  left: -3px;
+  left: -4px;
+  top: -1px;
   border-radius: 55px;
 }
 
 .fa-child {
-  padding: 11px;
+  padding: 11px 14px;
   background-color: lightblue;
   position: relative;
-  left: -3px;
+  left: -4px;
+  top: -1px;
   border-radius: 55px;
 }
 
@@ -176,7 +181,8 @@ h6 {
   padding: 11px; 
   background-color: lightblue;
   position: relative;
-  left: -3px;
+  left: -4px;
+  top: -1px;
   border-radius: 55px;
 }
 
@@ -184,7 +190,8 @@ h6 {
   padding: 11px;
   background-color: lightblue;
   position: relative;
-  left: -3px;
+  left: -4px;
+  top: -1px;
   border-radius: 55px;
 }
 
@@ -208,6 +215,13 @@ margin-left: 7px;
 padding-top: 5px;
 }
 
+.accom-most {
+  display: grid;
+  grid-template-columns: 1.5fr 1.1fr;
+  grid-template-rows: 1fr;
+  grid-area: "accommodations aside";
+  gap: 30px;
+}
 /*.accommodations {
   grid-area: accommodations;
   display: grid;
@@ -219,8 +233,9 @@ padding-top: 5px;
 .accommodations {
   background-color: lightgray;
   border-style: hidden;
-  width: 1000px;
+  width: 840px;
   border-radius: 1em;
+  margin-left: 40px;
 }
 
 h3 {
@@ -240,7 +255,7 @@ h3 {
 }
 
 .cards {
-  width: 275px;
+  width: 220px;
   margin-right: 5px;
   background-color: white;
   padding: 2px;
@@ -250,7 +265,7 @@ h3 {
 }
 
 .cards img {
-  width: 270px;
+  width: 216px;
   height: 120px;
   border-top-left-radius: 19px;
   border-top-right-radius: 19px;
@@ -308,10 +323,11 @@ aside {
 }
 
 
-h4 {
+#text-show {
   margin-bottom: 22px;
   margin: 20px;
   margin-left: 65px;
+  font-weight: 1000;
 }
  
 aside {
@@ -397,6 +413,8 @@ aside {
   grid-area: activities;
   width: 1200px;
   height: 530px;
+  padding: 30px;
+  margin: 5px 40px 5px 20px;
 }
 
 
@@ -415,30 +433,46 @@ aside {
 
 .cards-activities1 {
   grid-area: oldport;
- /* height: 530px;*/
   grid-column: 1 / 2;
   grid-row: 1 / 3;
+  background-color: white;
+  border-style: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 472px;
+  border-radius: 20px;
 }
 
 .cards-activities1 img {
-  width: 100%;
-  /*height: 430px;*/
-  border-radius: 20px;
+  width: 300px;
+  height: 430px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   object-fit:cover;
-  margin: 3px;
 }
+
+h4 {
+  margin: 8px 0px 0px 50px;
+  font-weight:bolder;
+}
+
 
 .cards-activities2 {
 grid-area: pomegues;
 grid-column: 2 / 3;
 grid-row: 1 / 2;
+background-color: white;
+border-style: none;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+height: 220px;
+border-radius: 20px;
 }
 
 .cards-activities2 img {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  margin:3px;
+  width: 300px;
+  height: 180px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  object-fit:cover;
 }
 
 
@@ -446,55 +480,79 @@ grid-row: 1 / 2;
 grid-area: frioul;
 grid-column: 2 / 3;
 grid-row: 2 / 3;
+background-color: white;
+border-style: none;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+height: 220px;
+border-radius: 20px;
+margin-top: 20px;
 }
 
 .cards-activities3 img {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  margin:3px;
+  width: 300px;
+  height: 180px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  object-fit:cover;
 }
 
 .cards-activities4 {
  grid-area: calanques;
  grid-column: 3 / 4;
  grid-row: 1 / 3;
- height: 850px;
+ background-color: white;
+ border-style: none;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ height: 472px;
+ border-radius: 20px;
+
 }
 
 .cards-activities4 img {
-  width: 100%;
-  height: 50%;
-  border-radius: 20px;
-  margin:3px;
+  width: 300px;
+  height: 430px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  object-fit:cover;
 }
 
 .cards-activities5 {
 grid-area:  notred;
 grid-column: 4 / 5;
 grid-row: 1 / 2;
-height: 200px;
+background-color: white;
+border-style: none;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+height: 220px;
+border-radius: 20px;
 }
 
 .cards-activities5 img {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  margin: 4px;
+  width: 300px;
+  height: 180px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  object-fit:cover;
 }
  
 .cards-activities6 {
 grid-area: longchamp;
 grid-column: 4 / 5;
 grid-row: 2 / 3;
-height: 200px;
+background-color: white;
+border-style: none;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+height: 220px;
+border-radius: 20px;
+margin-top: 20px;
 }
 
 .cards-activities6 img {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  margin:3px;
+  width: 300px;
+  height: 180px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  object-fit:cover;
 }
 
 /*footer {
@@ -513,13 +571,14 @@ height: 200px;
 
 footer {
   display: grid;
-  width: 1300px;
+  width: 1385px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
-  "ftabt ftoaccoms ftasst ftasst";
+  "ftabt ftoaccoms ftasst";
   grid-gap: 30px;
   background-color: lightgray;
+  margin-top: 90px;
 }
 
 .footer-about {
