@@ -9,6 +9,7 @@
     height: 100vh;
     font-family: "Raleway", sans-serif;
     display: grid;
+    margin: auto;
     grid-template-columns: 2.78fr 1.22fr;
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
@@ -231,7 +232,7 @@ padding-top: 5px;
   color: rgb(99, 97, 97)
 }*/
 .accommodations {
-  background-color: lightgray;
+  background-color: #ececec;
   border-style: hidden;
   width: 840px;
   border-radius: 1em;
@@ -337,6 +338,8 @@ aside {
   background-color: #ececec;
   grid-template-rows: auto 1fr 1fr 1fr;
   border-radius: 20px;
+  margin-left: -540px;
+  width: 430px;
   }
 
 .asideheadicon {
@@ -571,7 +574,7 @@ margin-top: 20px;
 
 footer {
   display: grid;
-  width: 1385px;
+  width: 1499px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas:
@@ -579,6 +582,7 @@ footer {
   grid-gap: 30px;
   background-color: lightgray;
   margin-top: 90px;
+  margin-left: -42px;
 }
 
 .footer-about {
